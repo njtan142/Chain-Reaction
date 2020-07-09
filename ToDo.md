@@ -5,6 +5,8 @@
     Status: Ongoing
         --> Wireframe of the data structure
             Status: Ongoing
+                --> First Design
+                    Status: Done
 # Make the Game Logic
     Status: Ongoing
         --> Data Structure to use
