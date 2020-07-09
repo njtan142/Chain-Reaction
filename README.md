@@ -53,5 +53,21 @@ The game is over when there are only one player left
     Status: Ongoing;
         --> HTML
             Status: Ongoing
+            --> Structure
+                --> Platform
+                    --> Span |or| Buttons
+                        Status: Ongoing
+                        --> Using Span Elements
+                            Status: Ongoing > Done
+                            File: ./spanDesign/index.html
+                        --> Using Button
+                            Status: Ongoing
+                            File: ./buttonDesign/.index.html
         --> CSS
             Status: Ongoing
+                --> Span Platform Design
+                    Status: Ongoing
+                    File: ./spanDesign/style.css
+                --> Button Platform Design
+                    Status: Ongoing
+                    File: ./buttonDesign/.index.html
