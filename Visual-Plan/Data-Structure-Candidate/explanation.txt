@@ -1,0 +1,4 @@
+Using array, we store the value of every box in an array
+Group the array and store it on a hash table(JS Object)
+We group the array in by column and by rows
+Grouping the array by row is easy but grouping the array by column will need another complex algorithm
