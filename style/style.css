@@ -46,3 +46,36 @@ body{
     font-size: 1em;
     margin-top: 0.5em;
 }
+@media only screen and (max-width:575px){
+    .box{
+        padding:1.2em;
+    }
+}
+@media only screen and (max-width:470px){
+    .box{
+        padding:1.1em;
+    }
+}
+@media only screen and (max-width:440px){
+    .box{
+        padding:1em;
+    }
+}
+@media only screen and (max-width:400px){
+    .box{
+        padding:0.9em;
+    }
+}
+@media only screen and (max-width:375px){
+    .box{
+        padding:0.8em;
+    }
+    #gameOver{
+        font-size: 1.5em;
+    }
+}
+@media only screen and (max-width:345px){
+    .box{
+        padding:0.7em;
+    }
+}
