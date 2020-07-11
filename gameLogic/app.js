@@ -272,5 +272,7 @@ function gameReset(){
     })
     const gameOver = document.getElementById('gameOver');
     gameOver.style.display = 'none'
+    color = 'red'
+    startingNum = 1;
     
 }
