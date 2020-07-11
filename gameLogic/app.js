@@ -28,7 +28,6 @@ for (let i = 0; i < boxes.length; i++) { // Game Initialization
             previousColor = 'blue'
             boxes[i].style.color = color;
             startingNum++
-            console.log('hey!')
             arrayInit();
             boxes[i].innerHTML = array[i] + 1;
             array[i] = (boxes[i].innerHTML == "" ? 0 : parseInt(boxes[i].innerHTML));
@@ -89,6 +88,26 @@ function hash(object, array) {
 function explosion(object,num){
   
     if(num < 0){
+        if(startingNum > 2){
+            let red = 0;
+            let blue = 0;
+            boxes.forEach(function(box){
+                if(box.style.color == 'red'){
+                    red = 1;
+                }else if(box.style.color == 'blue'){
+                    blue = 1;
+                }
+                
+            })
+            if(red == 0){
+                gameOver('Blue');
+                return;
+            }else if(blue == 0){
+                gameOver('Red');
+                return;
+            }
+    
+        }
         return
     }
     
@@ -235,25 +254,7 @@ function explosion(object,num){
             boxes[(i-2) * 9 + 8].style.color = color;
         }
     }
-    if(startingNum > 2){
-        let red = 0;
-        let blue = 0;
-        boxes.forEach(function(box){
-            if(box.style.color == 'red'){
-                red++;
-            }else if(box.style.color == 'blue'){
-                blue++;
-            }
-            
-        })
-        if(red == 0){
-            gameOver('Blue');
-            return;
-        }else if(blue == 0){
-            gameOver('Red');
-            return;
-        }
-    }
+  
     explosion(object,num-1)
 }
 function gameOver(player){
@@ -269,6 +270,7 @@ function gameReset(){
     }
     boxes.forEach(function(box){
         box.innerHTML = '';
+        box.style.color = 'black'
     })
     const gameOver = document.getElementById('gameOver');
     gameOver.style.display = 'none'
