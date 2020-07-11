@@ -12,11 +12,9 @@ boxes.forEach(function(box){
 })
 for (let i = 0; i < boxes.length; i++) { // Game Initialization
     boxes[i].addEventListener("click", function () {
-        console.log((startingNum%2 == 0 &&color == previousColor && boxes[i].style.color != 'red'))
         if(startingNum%2 == 1 && color == previousColor && boxes[i].style.color != 'blue'){
             color = 'red';
             previousColor = 'red'
-            console.log('hey!')
             boxes[i].style.color = color; 
             startingNum++
             arrayInit();
@@ -38,11 +36,6 @@ for (let i = 0; i < boxes.length; i++) { // Game Initialization
             columnObject = hash(columnObject, arrayGroupColumn(array, 9));
             explosion(rowObject,100)
         }
-        console.log(color, previousColor)
-
-        
-       
-        
     });
 }
 function arrayInit() {
@@ -94,6 +87,7 @@ function hash(object, array) {
 }
 
 function explosion(object,num){
+  
     if(num < 0){
         return
     }
@@ -241,5 +235,42 @@ function explosion(object,num){
             boxes[(i-2) * 9 + 8].style.color = color;
         }
     }
+    if(startingNum > 2){
+        let red = 0;
+        let blue = 0;
+        boxes.forEach(function(box){
+            if(box.style.color == 'red'){
+                red++;
+            }else if(box.style.color == 'blue'){
+                blue++;
+            }
+            
+        })
+        if(red == 0){
+            gameOver('Blue');
+            return;
+        }else if(blue == 0){
+            gameOver('Red');
+            return;
+        }
+    }
     explosion(object,num-1)
+}
+function gameOver(player){
+    const gameOver = document.getElementById('gameOver');
+    const gameOverText = document.querySelector('#gameOver h2');
+    gameOver.style.display = 'flex';
+    gameOverText.innerHTML = player + ' player wins!';
+    gameOverText.style.color = player.toLowerCase();
+}
+function gameReset(){
+    for(let i = 0; i < array.length;i++){
+        array[i] = 0;
+    }
+    boxes.forEach(function(box){
+        box.innerHTML = '';
+    })
+    const gameOver = document.getElementById('gameOver');
+    gameOver.style.display = 'none'
+    
 }

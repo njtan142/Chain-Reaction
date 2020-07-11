@@ -13,6 +13,7 @@ body{
 /* Grid Design */
 .platform{
     border:1px solid black;
+    position: relative;
 }
 .rows{
     display: flex; /*To overide spaces between the span elements */
@@ -25,4 +26,23 @@ body{
     display: inline-block;
     border: 1px solid black;
     margin:0;
+}
+#gameOver{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffffaa;
+    font-size: 2em;
+    top: 0;
+}
+#gameOver h1, #gameOver h2{
+    margin: 0;
+}
+#gameOver button{
+    font-size: 1em;
+    margin-top: 0.5em;
 }

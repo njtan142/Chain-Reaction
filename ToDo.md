@@ -3,6 +3,8 @@
         --> Wireframe of the data structure
             Status: Ongoing
                 --> First Design
+                    Status: Ongoing > Done
+                --> Final Design
                     Status: Ongoing
 # Design the Game Logic
     Status: Ongoing
@@ -10,6 +12,7 @@
             Status: Ongoing
                 --> First Design
                     Status: Ongoing > Done
+                
 # Make the Game Logic
     --> Javascript
         Status: Ongoing;
@@ -26,15 +29,15 @@
                     File:./Visual-Plan/manipulationOfData.md
                     Status: Ongoing
                 --> Conditions
-                    Status: Ongoing
+                    Status: Ongoing > Done
                 --> Game Initiation:
-                    Status: Ongoing
+                    Status: Ongoing > Done
                 --> Game Over:
-                    Status: Ongoing
+                    Status: Ongoing > Done
                 --> Game Reset:
-                    Status: Ongoing
+                    Status: Ongoing > Done
                 --> Game Flow:
-                    Status: Ongoing
+                    Status: Ongoing > Done
 # Make the Game Design
     Status: Ongoing;
         --> HTML

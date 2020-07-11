@@ -24,15 +24,19 @@ The game is over when there are only one player left
 
 # Make a wireframe of the game
     Status: Ongoing
-        --> Wireframe
-            Status: Ongoing > Preliminary Designs
-            File 
+        --> Wireframe of the data structure
+            Status: Ongoing
+                --> First Design
+                    Status: Ongoing > Done
+                --> Final Design
+                    Status: Ongoing
 # Design the Game Logic
     Status: Ongoing
         --> Wireframe of the data structure
             Status: Ongoing
                 --> First Design
                     Status: Ongoing > Done
+                
 # Make the Game Logic
     --> Javascript
         Status: Ongoing;
@@ -49,15 +53,15 @@ The game is over when there are only one player left
                     File:./Visual-Plan/manipulationOfData.md
                     Status: Ongoing
                 --> Conditions
-                    Status: Ongoing
+                    Status: Ongoing > Done
                 --> Game Initiation:
-                    Status: Ongoing
+                    Status: Ongoing > Done
                 --> Game Over:
-                    Status: Ongoing
+                    Status: Ongoing > Done
                 --> Game Reset:
-                    Status: Ongoing
+                    Status: Ongoing > Done
                 --> Game Flow:
-                    Status: Ongoing
+                    Status: Ongoing > Done
 # Make the Game Design
     Status: Ongoing;
         --> HTML
